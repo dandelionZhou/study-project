@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/StudyProjectWorkspace.iml" filepath="$PROJECT_DIR$/StudyProjectWorkspace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-ioc/study-ioc.iml" filepath="$PROJECT_DIR$/study-ioc/study-ioc.iml" />
+    </modules>
+  </component>
+</project>
