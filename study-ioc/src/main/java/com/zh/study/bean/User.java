@@ -1,9 +1,47 @@
 package com.zh.study.bean;
 
-import lombok.Data;
+import javax.annotation.PostConstruct;
 
-@Data
 public class User {
     private long id;
     private String name;
+
+    public User() {
+        System.out.println("User -> constructor...");
+    }
+
+    /**
+     * 在bean初始化完成后populateBean()之后
+     */
+    @PostConstruct
+    public void init() {
+        System.out.println("User -> PostConstruct");
+    }
+
+
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
