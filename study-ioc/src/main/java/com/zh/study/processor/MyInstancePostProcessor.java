@@ -2,6 +2,8 @@ package com.zh.study.processor;
 
 import com.zh.study.bean.User;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.PropertyValue;
+import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.stereotype.Component;
 
@@ -21,5 +23,11 @@ public class MyInstancePostProcessor implements InstantiationAwareBeanPostProces
             System.out.println("Instance -> postProcessAfterInstantiation");
         }
         return false;
+    }
+
+    @Override
+    public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) throws BeansException {
+        PropertyValues myValues;
+        return pvs;
     }
 }

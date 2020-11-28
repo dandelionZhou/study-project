@@ -3,6 +3,7 @@ package com.zh.study;
 import com.zh.study.config.MainConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 /**
  * Bean的生命周期：

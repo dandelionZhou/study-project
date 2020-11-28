@@ -6,6 +6,8 @@ public class User {
     private long id;
     private String name;
 
+    private String value = "666";
+
     public User() {
         System.out.println("User -> constructor...");
     }

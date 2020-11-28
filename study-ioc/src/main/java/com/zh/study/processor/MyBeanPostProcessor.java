@@ -11,7 +11,7 @@ public class MyBeanPostProcessor implements BeanPostProcessor{
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof User) {
-            System.out.println("BeanPostProcessor - > postProcessBeforeInitialization");
+            System.out.println("BeanPostProcessor - > postProcessBeforeInitialization " + bean);
         }
         return null;
     }
@@ -19,7 +19,7 @@ public class MyBeanPostProcessor implements BeanPostProcessor{
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof User) {
-            System.out.println("BeanPostProcessor - > postProcessAfterInitialization");
+            System.out.println("BeanPostProcessor - > postProcessAfterInitialization " + bean);
         }
         return null;
     }
