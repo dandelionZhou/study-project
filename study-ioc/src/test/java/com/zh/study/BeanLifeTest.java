@@ -1,5 +1,6 @@
 package com.zh.study;
 
+import com.zh.study.bean.BallFactoryBean;
 import com.zh.study.config.MainConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -36,5 +37,11 @@ public class BeanLifeTest {
         for (String name : beanNames) {
             System.out.println(name);
         }
+
+        Object ballBean = applicationContext.getBean("ballFactoryBean");
+        System.out.println(ballBean);
+
+        Object ballFactoryBean = applicationContext.getBean("&ballFactoryBean");
+        System.out.println(ballFactoryBean);
     }
 }
