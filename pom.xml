@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>study-ioc</module>
+        <module>study-proxy</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
