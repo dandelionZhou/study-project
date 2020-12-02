@@ -6,6 +6,7 @@
     <modules>
         <module>study-ioc</module>
         <module>study-proxy</module>
+        <module>study-aop</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
