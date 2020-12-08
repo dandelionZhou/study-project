@@ -6,6 +6,9 @@ import java.util.List;
 /**
  *
  * 一个简单的生产者消费者模式展示了wait(),notify()的应用
+ *
+ * 虚假唤醒：被挂起的线程没有经过其他线程的notify(),notifyAll()唤醒或被中断，等待超时，直接变成了可以运行的状态。
+ *
  * @date 2020/12/7
  */
 public class TestWaitNotify {
@@ -16,6 +19,8 @@ public class TestWaitNotify {
 
             new Thread(() -> {
                 synchronized (resourceList) {
+                    //此处为什么用while而非if？
+                    //防止虚假唤醒
                     while (resourceList.size() == 1) {
                         try {
                             resourceList.wait();
@@ -50,5 +55,9 @@ public class TestWaitNotify {
                 }
             }).start();
         }
+
+
+
+        System.out.println(Thread.currentThread().getName() + ": main over...");
     }
 }
