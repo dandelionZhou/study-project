@@ -15,6 +15,7 @@ public class TestSynchronized {
 
     public static final String SFLAG = "FLAG";
 
+    static String TXT = "2";
     public static void main(String[] args) throws InterruptedException {
 
         new Thread(() -> {
@@ -29,7 +30,10 @@ public class TestSynchronized {
             }
         }, "threadA").start();
 
+        TXT = null;
         Thread.sleep(1000);
+
+        System.gc();
 
         new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + ":" + TestSynchronized.SFLAG);
@@ -38,5 +42,6 @@ public class TestSynchronized {
 
         System.out.println(TestSynchronized.SFLAG);
         System.out.println("main is over...");
+
     }
 }
