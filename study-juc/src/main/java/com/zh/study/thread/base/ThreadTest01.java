@@ -6,6 +6,9 @@ public class ThreadTest01  {
         @Override
         public void run() {
             System.out.println("test base therad create");
+
+
+
         }
     }
 }
