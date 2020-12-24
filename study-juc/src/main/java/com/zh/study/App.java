@@ -4,12 +4,14 @@ import com.zh.study.thread.base.ThreadTest01;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 
 /**
  * Hello world!
  *
  */
+
 public class App 
 {
 
@@ -42,11 +44,13 @@ public class App
 
     static int i;
 
-    public static void main( String[] args ) throws ClassNotFoundException {
+    public static void main( String[] args ) throws ClassNotFoundException, InterruptedException {
         MyClassLoader classLoader = new MyClassLoader();
         Object o = classLoader.loadClass("com.zh.study.thread.base.ThreadTest01");
         System.out.println(((Class) o).getClassLoader());
         System.out.println(o instanceof com.zh.study.thread.base.ThreadTest01);
         System.out.println( "Hello World!" );
+        System.out.println(1 << 16);
+        System.out.println(1 & 65535);
     }
 }
