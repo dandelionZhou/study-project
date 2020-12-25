@@ -54,7 +54,7 @@ public class MyThreadPool {
      * maximumPoolSize: 最大线程数5个
      * @return
      */
-    static ExecutorService createMyThreadPool() {
+    public static ExecutorService createMyThreadPool() {
 
         return new ThreadPoolExecutor(
                 5,
