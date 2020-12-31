@@ -1,5 +1,7 @@
 package com.zh.study.thread.base.create;
 
+import java.util.concurrent.locks.LockSupport;
+
 /**
  * 继承Thread 创建线程
  * @create 2020-12-07
@@ -18,7 +20,7 @@ public class CreateByExtendThread {
 
         Thread thread = new TestThread();
         thread.start();
-
+        thread.wait();
         Thread.sleep(1000);
         System.out.println(Thread.currentThread().getName() + ": main over");
     }

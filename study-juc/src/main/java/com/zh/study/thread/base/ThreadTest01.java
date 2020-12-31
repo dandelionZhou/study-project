@@ -1,14 +1,24 @@
 package com.zh.study.thread.base;
 
+import sun.misc.Unsafe;
+
+import java.util.concurrent.locks.LockSupport;
+
 public class ThreadTest01  {
+    private static boolean ready;
+    private static int num;
+    public static void main(String[] args) {
+        new Thread(() -> {
+            while (!Thread.currentThread().isInterrupted()) {
+                if (ready) {
+                    System.out.println(num
+                    );
+                }
+            }
+        }).start();
 
-    class TestThread extends Thread {
-        @Override
-        public void run() {
-            System.out.println("test base therad create");
+        new Thread(() -> {
 
-
-
-        }
+        }).start();
     }
 }
